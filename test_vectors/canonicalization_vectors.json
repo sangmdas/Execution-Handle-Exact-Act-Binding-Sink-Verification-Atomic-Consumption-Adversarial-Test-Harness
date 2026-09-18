@@ -1,0 +1,41 @@
+[
+  {
+    "name": "key-order",
+    "value": {
+      "z": 3,
+      "a": 1,
+      "nested": {
+        "b": 2,
+        "a": 1
+      }
+    }
+  },
+  {
+    "name": "unicode",
+    "value": {
+      "city": "Kolkata",
+      "greeting": "নমস্কার",
+      "symbol": "₹"
+    }
+  },
+  {
+    "name": "arrays",
+    "value": {
+      "ops": [
+        "read",
+        "write"
+      ],
+      "count": 2,
+      "enabled": true,
+      "note": null
+    }
+  },
+  {
+    "name": "signed-int",
+    "value": {
+      "min": -9007199254740991,
+      "max": 9007199254740991,
+      "zero": 0
+    }
+  }
+]

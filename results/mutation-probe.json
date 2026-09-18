@@ -1,0 +1,8 @@
+{
+  "seed": "0xEFA11",
+  "cases": 2000,
+  "reordered_equivalent_same_digest": 2000,
+  "single_argument_mutation_changed_digest": 2000,
+  "pass": true,
+  "note": "Deterministic property probe, not cryptographic collision testing or formal verification."
+}

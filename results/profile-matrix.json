@@ -1,0 +1,107 @@
+{
+  "variables": {
+    "profiles": [
+      "agent-tool",
+      "payment",
+      "cloud-egress",
+      "industrial"
+    ],
+    "concurrency": [
+      2,
+      8,
+      32,
+      64
+    ],
+    "canonicalization": "REFCANON-1",
+    "store": "SQLite WAL + synchronous=FULL",
+    "clock": "fixed deterministic"
+  },
+  "pass": 12,
+  "total": 12,
+  "rows": [
+    {
+      "profile": "agent-tool",
+      "case": "matching",
+      "expected": "EFFECTUATED",
+      "observed": "EFFECTUATED",
+      "pass": true
+    },
+    {
+      "profile": "agent-tool",
+      "case": "argument-substitution",
+      "expected": "EF-023",
+      "observed": "EF-023",
+      "pass": true
+    },
+    {
+      "profile": "payment",
+      "case": "matching",
+      "expected": "EFFECTUATED",
+      "observed": "EFFECTUATED",
+      "pass": true
+    },
+    {
+      "profile": "payment",
+      "case": "argument-substitution",
+      "expected": "EF-023",
+      "observed": "EF-023",
+      "pass": true
+    },
+    {
+      "profile": "cloud-egress",
+      "case": "matching",
+      "expected": "EFFECTUATED",
+      "observed": "EFFECTUATED",
+      "pass": true
+    },
+    {
+      "profile": "cloud-egress",
+      "case": "argument-substitution",
+      "expected": "EF-023",
+      "observed": "EF-023",
+      "pass": true
+    },
+    {
+      "profile": "industrial",
+      "case": "matching",
+      "expected": "EFFECTUATED",
+      "observed": "EFFECTUATED",
+      "pass": true
+    },
+    {
+      "profile": "industrial",
+      "case": "argument-substitution",
+      "expected": "EF-023",
+      "observed": "EF-023",
+      "pass": true
+    },
+    {
+      "profile": "single-use",
+      "case": "concurrency-2",
+      "expected": "1 OK, rest EF-005",
+      "observed": "1 OK, 1 EF-005",
+      "pass": true
+    },
+    {
+      "profile": "single-use",
+      "case": "concurrency-8",
+      "expected": "1 OK, rest EF-005",
+      "observed": "1 OK, 7 EF-005",
+      "pass": true
+    },
+    {
+      "profile": "single-use",
+      "case": "concurrency-32",
+      "expected": "1 OK, rest EF-005",
+      "observed": "1 OK, 31 EF-005",
+      "pass": true
+    },
+    {
+      "profile": "single-use",
+      "case": "concurrency-64",
+      "expected": "1 OK, rest EF-005",
+      "observed": "1 OK, 63 EF-005",
+      "pass": true
+    }
+  ]
+}

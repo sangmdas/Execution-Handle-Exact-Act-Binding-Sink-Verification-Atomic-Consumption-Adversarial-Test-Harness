@@ -1,0 +1,11 @@
+{
+  "n": 1000,
+  "end_to_end_ops_per_s": 1041.318163510306,
+  "hot_path_ms": {
+    "p50": 0.5696675,
+    "p95": 0.698134,
+    "p99": 1.000537,
+    "max": 2.310007
+  },
+  "note": "Local SQLite WAL/FULL durability reference only; not a network or production benchmark."
+}

@@ -1,0 +1,36 @@
+{
+  "timestamp_utc": "2026-09-17T04:18:22Z",
+  "system": {
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "machine": "x86_64",
+    "python": "3.13.5"
+  },
+  "runs": [
+    {
+      "cmd": "/opt/pyvenv/bin/python -m unittest discover -s tests -v",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "test_01_matching_single_use_effectuates (test_reference.ExecutionHandleTests.test_01_matching_single_use_effectuates) ... ok\ntest_02_second_single_use_is_EF005 (test_reference.ExecutionHandleTests.test_02_second_single_use_is_EF005) ... ok\ntest_03_argument_substitution_EF023 (test_reference.ExecutionHandleTests.test_03_argument_substitution_EF023) ... ok\ntest_04_destination_substitution_EF020 (test_reference.ExecutionHandleTests.test_04_destination_substitution_EF020) ... ok\ntest_05_wrong_sink_EF040 (test_reference.ExecutionHandleTests.test_05_wrong_sink_EF040) ... ok\ntest_06_expired_handle_EF004 (test_reference.ExecutionHandleTests.test_06_expired_handle_EF004) ... ok\ntest_07_integrity_broken_handle_EF003 (test_reference.ExecutionHandleTests.test_07_integrity_broken_handle_EF003) ... ok\ntest_08_stale_policy_generation_EF041 (test_reference.ExecutionHandleTests.test_08_stale_policy_generation_EF041) ... ok\ntest_09_revoked_handle_EF062 (test_reference.ExecutionHandleTests.test_09_revoked_handle_EF062) ... ok\ntest_10_revocation_after_early_verify_before_commit_is_blocked (test_reference.ExecutionHandleTests.test_10_revocation_after_early_verify_before_commit_is_blocked) ... ok\ntest_11_caller_supplied_stale_arguments_digest_cannot_override_live_arguments (test_reference.ExecutionHandleTests.test_11_caller_supplied_stale_arguments_digest_cannot_override_live_arguments) ... ok\ntest_12_counted_under_limit_then_EF005 (test_reference.ExecutionHandleTests.test_12_counted_under_limit_then_EF005) ... ok\ntest_13_envelope_non_identical_in_range_succeeds (test_reference.ExecutionHandleTests.test_13_envelope_non_identical_in_range_succeeds) ... ok\ntest_14_envelope_identical_replay_default_EF006 (test_reference.ExecutionHandleTests.test_14_envelope_identical_replay_default_EF006) ... ok\ntest_15_envelope_identical_replay_explicitly_allowed (test_reference.ExecutionHandleTests.test_15_envelope_identical_replay_explicitly_allowed) ... ok\ntest_16_envelope_out_of_range_EF043 (test_reference.ExecutionHandleTests.test_16_envelope_out_of_range_EF043) ... ok\ntest_17_two_concurrent_workers_only_one_commit (test_reference.ExecutionHandleTests.test_17_two_concurrent_workers_only_one_commit) ... ok\ntest_18_32_way_concurrency_only_one_commit (test_reference.ExecutionHandleTests.test_18_32_way_concurrency_only_one_commit) ... ok\ntest_19_crash_after_consume_before_commit_rolls_back_local_transaction (test_reference.ExecutionHandleTests.test_19_crash_after_consume_before_commit_rolls_back_local_transaction) ... ok\ntest_20_receipt_replayed_as_handle_EF002 (test_reference.ExecutionHandleTests.test_20_receipt_replayed_as_handle_EF002) ... ok\ntest_21_attestation_result_instead_of_handle_EF002 (test_reference.ExecutionHandleTests.test_21_attestation_result_instead_of_handle_EF002) ... ok\ntest_22_scitt_receipt_instead_of_handle_EF002 (test_reference.ExecutionHandleTests.test_22_scitt_receipt_instead_of_handle_EF002) ... ok\ntest_23_valid_workload_identity_does_not_override_act_mismatch (test_reference.ExecutionHandleTests.test_23_valid_workload_identity_does_not_override_act_mismatch) ... ok\ntest_24_key_bound_handle_without_pop_EF012 (test_reference.ExecutionHandleTests.test_24_key_bound_handle_without_pop_EF012) ... ok\ntest_25_key_bound_handle_with_pop_succeeds (test_reference.ExecutionHandleTests.test_25_key_bound_handle_with_pop_succeeds) ... ok\ntest_26_consume_store_down_fails_closed_EF081 (test_reference.ExecutionHandleTests.test_26_consume_store_down_fails_closed_EF081) ... ok\ntest_27_cad_argument_key_order_does_not_change_digest (test_reference.ExecutionHandleTests.test_27_cad_argument_key_order_does_not_change_digest) ... ok\ntest_28_unicode_is_stable (test_reference.ExecutionHandleTests.test_28_unicode_is_stable) ... ok\ntest_29_float_arguments_rejected_by_reference_canonical_profile (test_reference.ExecutionHandleTests.test_29_float_arguments_rejected_by_reference_canonical_profile) ... ok\ntest_30_sink_local_reconstruction_recomputes_argument_digest (test_reference.ExecutionHandleTests.test_30_sink_local_reconstruction_recomputes_argument_digest) ... ok\ntest_31_alternate_raw_credential_path_demonstrates_path_coverage_limit (test_reference.ExecutionHandleTests.test_31_alternate_raw_credential_path_demonstrates_path_coverage_limit) ... ok\ntest_32_policy_correctness_is_out_of_scope (test_reference.ExecutionHandleTests.test_32_policy_correctness_is_out_of_scope) ... ok\ntest_33_unknown_authority_object_EF002 (test_reference.ExecutionHandleTests.test_33_unknown_authority_object_EF002) ... ok\ntest_34_tampered_not_bearer_flag_breaks_integrity_EF003 (test_reference.ExecutionHandleTests.test_34_tampered_not_bearer_flag_breaks_integrity_EF003) ... ok\ntest_35_counted_max_uses_must_be_positive_EF042 (test_reference.ExecutionHandleTests.test_35_counted_max_uses_must_be_positive_EF042) ... ok\ntest_36_base_envelope_without_explicit_binding_profile_rejected_EF042 (test_reference.ExecutionHandleTests.test_36_base_envelope_without_explicit_binding_profile_rejected_EF042) ... ok\n\n----------------------------------------------------------------------\nRan 36 tests in 0.263s\n\nOK\n"
+    },
+    {
+      "cmd": "/opt/pyvenv/bin/python interop/python_digest.py",
+      "returncode": 0,
+      "stdout": "key-order d414ce7eaad7401ffd57be0e7bbfd0f41d95e15157df247c641cf7cfb38c2b29\nunicode cf0a95bed8010f013ce8a419361ed5a2877e34cbfeff50ec7ff2e68cb97b7533\narrays 9d54fdd2b72266232c6dfb607c67699a327c4ad143a7e07a9365865783700730\nsigned-int b7b2401ddca2165824e98c61890c0aaec470258d3119dd265d02be9438bf47e6\n",
+      "stderr": ""
+    },
+    {
+      "cmd": "node interop/node_digest.mjs",
+      "returncode": 0,
+      "stdout": "key-order d414ce7eaad7401ffd57be0e7bbfd0f41d95e15157df247c641cf7cfb38c2b29\nunicode cf0a95bed8010f013ce8a419361ed5a2877e34cbfeff50ec7ff2e68cb97b7533\narrays 9d54fdd2b72266232c6dfb607c67699a327c4ad143a7e07a9365865783700730\nsigned-int b7b2401ddca2165824e98c61890c0aaec470258d3119dd265d02be9438bf47e6\n",
+      "stderr": ""
+    },
+    {
+      "cmd": "go run interop/go_digest.go",
+      "returncode": 0,
+      "stdout": "key-order d414ce7eaad7401ffd57be0e7bbfd0f41d95e15157df247c641cf7cfb38c2b29\nunicode cf0a95bed8010f013ce8a419361ed5a2877e34cbfeff50ec7ff2e68cb97b7533\narrays 9d54fdd2b72266232c6dfb607c67699a327c4ad143a7e07a9365865783700730\nsigned-int b7b2401ddca2165824e98c61890c0aaec470258d3119dd265d02be9438bf47e6\n",
+      "stderr": ""
+    }
+  ],
+  "interop_equal": true,
+  "golden_vectors_match": true
+}
